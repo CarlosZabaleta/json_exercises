@@ -1,0 +1,61 @@
+//JSON parameters
+//"param1":"value1", "param2":"value2", ...
+
+var clubMember = {
+	"firstname":"John",
+	"lastname":"Doe",
+	"memberStatus":"Full"
+};
+
+//JSON.parse() from string to Object
+var Mary = '{ "height":1.9, "age":36, "eyeColor":"brown"}';
+
+// use JSON.parse() to create an object 'objectMary':
+var objectMary = JSON.parse(Mary);
+console.log(objectMary.age);
+
+//JSON.stringify()
+//convert from object to string to transmit data through communications 
+var Mary = new Object();
+Mary.height = 1.9;
+Mary.age = 36;
+Mary.eyecolor = "brown";
+
+// serialize the object using JSON.striniy():
+console.log(JSON.stringify(Mary));
+
+string = JSON.stringify(Mary);
+console.log(string);
+
+console.log(JSON.parse(string));
+if(string==Mary){
+console.log("they are the same")
+}else{
+console.log("they are not the same")
+}
+
+//Assosiative array
+
+var conference = {
+	"startDay" : "Monday",
+	"nextDay" : "Tuesday",
+	"endDay" : "Wednesday"
+};
+
+console.log(conference['endDay']);
+
+//Add element to object
+//Object
+var user = {
+	"username" : "laura123",
+	"city" : "New York",
+	"system" : "linux"
+};
+//console log
+console.log("User " + user.username + " is located in " + user.city + " and uses " + user.system);
+
+//add new element to the object
+user["nickname"] = "Lau";
+
+//console log
+console.log("User " + user.username + " his/her nickname is " + user.nickname + " and uses " + user.system);
